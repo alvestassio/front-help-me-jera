@@ -1,34 +1,35 @@
 <template>
   <div>
-    <button id="buttonNewQuestion" type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
-      data-bs-target="#exampleModal" data-bs-whatever="@mdo">+ NOVA PERGUNTA</button>
+    <button
+      id="buttonNewQuestion"
+      type="button"
+      class="btn btn-success btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#newQuestionModal"
+      data-bs-whatever="@mdo"
+    >
+      + Nova pergunta
+    </button>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="newQuestionModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nova Pergunta</h5>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            <h5 class="modal-title" id="modal-title">Nova pergunta</h5>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3 row">
                 <div class="form-group col-md-6">
-                  <label for="message-text" class="col-form-label">Area</label>
+                  <label for="message-text" class="col-form-label">Time</label>
                   <select v-model="question.tagId" class="form-select" id="floatingSelect"
                     aria-label="Floating label select example">
                     <option value="1">web-dev</option>
-                    <option value="2">am</option>
-                    <option value="3">po</option>
-                    <option value="3">designer</option>
-                    <option value="3">tester</option>
-                    <option value="3">ios</option>
-                    <option value="3">android</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="message-text" class="col-form-label">Etiquetas</label>
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  <label for="message-text" class="col-form-label">Tags</label>
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example" disabled>
                     <option value="1">web-dev</option>
                     <option value="2">am</option>
                     <option value="3">po</option>
@@ -40,7 +41,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label">Titulo</label>
+                <label for="message-text" class="col-form-label">Título</label>
                 <textarea v-model="question.title" class="form-control" id="message-text"></textarea>
               </div>
               <div class="mb-3">
@@ -92,10 +93,17 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
 #buttonNewQuestion {
-  background-color: rgb(0, 189, 0);
-  border-bottom: 1px solid rgb(0, 189, 0);
-  height: 60px;
+  background-color: #11B654;
+  padding: 12px;
+  border: 1px solid #11B654;
+  border-radius: 8px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .modal-header {
@@ -112,13 +120,25 @@ export default {
 }
 
 #buttonSave {
-  background-color: rgb(0, 189, 0);
-  border-bottom: 1px solid rgb(0, 189, 0);
+  background-color: #11B654;
+  border: 1px solid #11B654;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 #buttonCancel {
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(40, 41, 40);
+  border: 1px solid black;
   color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

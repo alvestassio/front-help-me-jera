@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-2">
         <div class="form-group">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+          <select class="form-select" id="floating-select" aria-label="Floating label select example">
             <option selected>Todas</option>
             <option value="1">web-dev</option>
             <option value="2">am</option>
@@ -21,9 +21,6 @@
         </div>
       </div>
       <div class="col-md-1">
-        <div class="form-group">
-          <button type="button" class="btn btn-outline-secondary">Buscar</button>
-        </div>
       </div>
       <div class="col-md-3">
         <div class="form-group float-end">
@@ -84,7 +81,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .row-titles-columns {
-  background: #e5e6e9 0% 0% no-repeat padding-box;
+  background: #ededed 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   height: 60px;
@@ -109,6 +106,14 @@ export default {
 
 #search-questions-input {
   border: none;
+  border-bottom: 2px solid #11B654;
+  border-radius: 0;
   outline: none;
+}
+
+#floating-select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  border: 3px solid #cacaca;
 }
 </style>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import login from "../views/LoginView.vue";
 import home from "../views/Home.vue";
+import questionDetails from "../views/QuestionDetails.vue";
 
 Vue.use(VueRouter);
 
@@ -13,17 +14,19 @@ const routes = [
     component: login,
   },
   {
-    path: '/forum',
-    name: 'forum',
+    path: '/perguntas',
+    name: 'perguntas',
     component: home,
   },
   {
     path: '/login',
     name: 'login',
     component: login,
-    meta: {
-        authenticationRequired: false
-    }
+  },
+  {
+    path: '/pergunta-detalhes',
+    name: 'pergunta-detalhes',
+    component: questionDetails,
   }
 ]
 

@@ -21,7 +21,7 @@
 export default {
   methods: {
     login() {
-      this.$router.push('/forum');
+      this.$router.push('/perguntas');
     }
   }
 }

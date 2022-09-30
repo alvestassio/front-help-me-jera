@@ -13,7 +13,7 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="#">Perguntas</a>
+          <a class="nav-link" href="/perguntas">Perguntas</a>
           <a class="nav-link" href="#">Tutoriais</a>
           <a class="nav-link disabled">Deu-Ruim</a>
         </div>
@@ -45,7 +45,7 @@ export default {
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid rgb(0, 189, 0);
+  border-bottom: 1px solid #11B654;
 }
 
 .navbar-expand-lg .navbar-collapse {
