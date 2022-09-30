@@ -17,12 +17,12 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Buscar">
+          <input type="text" id="search-questions-input" class="form-control" placeholder="Buscar">
         </div>
       </div>
       <div class="col-md-1">
         <div class="form-group">
-          <button type="button" class="btn btn-outline-secondary">BUSCAR</button>
+          <button type="button" class="btn btn-outline-secondary">Buscar</button>
         </div>
       </div>
       <div class="col-md-3">
@@ -105,5 +105,10 @@ export default {
   justify-content: center;
   font-family: 'Montserrat';
   font-size: 12px;
+}
+
+#search-questions-input {
+  border: none;
+  outline: none;
 }
 </style>

@@ -2,23 +2,23 @@
   <div class="row mt-2 question-item-container">
     <div class="col-md-6">
       <div class="question">
-        <h2>{{ question.title }}</h2>
-        <p>{{ question.description }}</p>
+        <h2 class="question-title">{{ question.title }}</h2>
+        <p class="question-description">{{ question.description }}</p>
       </div>
     </div>
     <div class="col-md-2 ">
       <div class="additional-information">
-        <span>{{ question.tag.title }}</span>
+        <span class="tag-title">{{ question.tag.title }}</span>
       </div>
     </div>
     <div class="col-md-2">
       <div class="additional-information">
-        <span>{{ question.user.name }}</span>
+        <span class="user-name">{{ question.user.name }}</span>
       </div>
     </div>
     <div class="col-md-2">
       <div class="additional-information">
-        <span>40</span>
+        <span class="answers-count">40</span>
       </div>
     </div>
   </div>
@@ -51,6 +51,17 @@ export default {
   align-items: flex-start;
   justify-content: center;
   padding-left: 32px;
+}
+
+.question-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.question-description {
+  font-family: 'Montserrat';
+  font-size: 16px;
 }
 
 .additional-information {
