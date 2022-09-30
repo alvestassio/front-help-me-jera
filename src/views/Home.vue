@@ -81,7 +81,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .row-titles-columns {
-  background: #ededed 0% 0% no-repeat padding-box;
+  background: #EEEFF1 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   height: 60px;

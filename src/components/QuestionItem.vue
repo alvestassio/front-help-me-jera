@@ -47,7 +47,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 .question-item-container {
-  background: #ededed 0% 0% no-repeat padding-box;
+  background: #f3f3f5 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   padding: 20px 0;
