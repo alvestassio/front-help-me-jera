@@ -39,9 +39,9 @@ export default {
   font-family: 'Montserrat';
   font-weight: 0;
   text-decoration: none;
-  padding: 6px 10px;
+  margin: 6px 12px;
   font-size: 14px;
-  transition: border 0.4s ease-in;
+  transition: border 0.3s ease-in;
 }
 
 .nav-link:hover {
