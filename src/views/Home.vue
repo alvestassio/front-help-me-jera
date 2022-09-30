@@ -1,107 +1,59 @@
 <template>
-  <div>
-    <h1>
-      OLA MUNDOOOO
-    </h1>
-    <div class="text-center">
-      <v-btn class="ma-2" :loading="loading" :disabled="loading" color="secondary" @click="loader = 'loading'">
-        Accept Terms
-      </v-btn>
-
-      <v-btn :loading="loading3" :disabled="loading3" color="blue-grey" class="ma-2 white--text"
-        @click="loader = 'loading3'">
-        Upload
-        <v-icon right dark>
-          mdi-cloud-upload
-        </v-icon>
-      </v-btn>
-
-      <v-btn class="ma-2" :loading="loading2" :disabled="loading2" color="success" @click="loader = 'loading2'">
-        Custom Loader
-        <template v-slot:loader>
-          <span>Loading...</span>
-        </template>
-      </v-btn>
-
-      <v-btn class="ma-2" :loading="loading4" :disabled="loading4" color="info" @click="loader = 'loading4'">
-        Icon Loader
-        <template v-slot:loader>
-          <span class="custom-loader">
-            <v-icon light>mdi-cached</v-icon>
-          </span>
-        </template>
-      </v-btn>
-
-      <v-btn :loading="loading5" :disabled="loading5" color="blue-grey" class="ma-2 white--text" fab
-        @click="loader = 'loading5'">
-        <v-icon dark>
-          mdi-cloud-upload
-        </v-icon>
-      </v-btn>
+  <div class="mt-5">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="form-group">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Todas</option>
+            <option value="1">web-dev</option>
+            <option value="2">am</option>
+            <option value="3">po</option>
+            <option value="3">designer</option>
+            <option value="3">tester</option>
+            <option value="3">ios</option>
+            <option value="3">android</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <button type="button" class="btn btn-success btn-lg float-end"> Nova Pergunta </button>
+        </div>
+      </div>
+    </div>
+    <div class="row row-titles-coluns mt-5">
+      <div class="col-md-6">
+        Tópicos
+      </div>
+      <div class="col-md-2">
+        Area
+      </div>
+      <div class="col-md-2">
+        Usuário
+      </div>
+      <div class="col-md-2">
+        Respostas
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        loader: null,
-        loading: false,
-        loading2: false,
-        loading3: false,
-        loading4: false,
-        loading5: false,
-      }
-    },
-    watch: {
-      loader () {
-        const l = this.loader
-        this[l] = !this[l]
+export default {
 
-        setTimeout(() => (this[l] = false), 3000)
-
-        this.loader = null
-      },
-    },
-  }
+}
 </script>
 
 <style>
-  .custom-loader {
-    animation: loader 1s infinite;
-    display: flex;
-  }
-  @-moz-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @-o-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+.row-titles-coluns {
+  background: #EEEFF1 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  height: 60px;
+}
 </style>
