@@ -3,27 +3,19 @@ import VueRouter from 'vue-router'
 
 import login from "../views/LoginView.vue";
 import home from "../views/Home.vue";
-import header from "../components/Header.vue";
-
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: home,
-    // meta: {
-    //     authenticationRequired: true
-    // }
+    name: 'login',
+    component: login,
   },
   {
-    path: '/register',
-    name: 'register',
-    component: header,
-    // meta: {
-    //     authenticationRequired: false
-    // }
+    path: '/forum',
+    name: 'forum',
+    component: home,
   },
   {
     path: '/login',

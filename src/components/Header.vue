@@ -8,14 +8,14 @@
       </button>
       <div>
         <div class="logo">
-          <h2> Help me Jera</h2>
+          <h2 class="logo-title">JeraHelp</h2>
         </div>
       </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="#">Perguntas</a>
           <a class="nav-link" href="#">Tutoriais</a>
-          <a class="nav-link disabled">Deu Ruim</a>
+          <a class="nav-link disabled">Deu-Ruim</a>
         </div>
       </div>
     </div>
@@ -36,6 +36,16 @@ export default {
 
 .nav-link {
   color: azure !important;
+  font-family: 'Montserrat';
+  font-weight: 0;
+  text-decoration: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  transition: border 0.4s ease-in;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid rgb(0, 189, 0);
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -44,6 +54,12 @@ export default {
 }
 
 .logo {
-  color: aliceblue
+  color: aliceblue;
+}
+
+.logo-title {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 28px;
 }
 </style>

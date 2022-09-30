@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div class="mt-5 container">
     <div class="row">
       <div class="col-md-2">
         <div class="form-group">
@@ -20,40 +20,90 @@
           <input type="text" class="form-control" placeholder="Buscar">
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-1">
         <div class="form-group">
-          <button type="button" class="btn btn-success btn-lg float-end"> Nova Pergunta </button>
+          <button type="button" class="btn btn-outline-secondary">BUSCAR</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group float-end">
+          <new-question-form @reloadQuestions="listQuestions" />
         </div>
       </div>
     </div>
-    <div class="row row-titles-coluns mt-5">
-      <div class="col-md-6">
+    <div class="row row-titles-columns mt-5">
+      <div class="col-md-6 question-mark">
         Tópicos
       </div>
-      <div class="col-md-2">
-        Area
+      <div class="col-md-2 additional-information">
+        Time
       </div>
-      <div class="col-md-2">
-        Usuário
+      <div class="col-md-2 additional-information">
+        Viking
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 additional-information">
         Respostas
       </div>
     </div>
+    <question-item v-for="question in questions" :key="question.id" :question="question" />
   </div>
 </template>
 
 <script>
-export default {
+import questionResource from '../api/resources/question';
 
+export default {
+  name: 'Home',
+  components: {
+    QuestionItem: () => import('@/components/QuestionItem'),
+    NewQuestionForm: () => import('@/components/NewQuestionForm'),
+  },
+  data() {
+    return {
+      questions: []
+    };
+  },
+  created() {
+    this.listQuestions();
+  },
+  methods: {
+    listQuestions() {
+      questionResource.listAll()
+        .then(response => {
+          this.questions = response.data;
+        })
+        .catch(response => {
+          console.log('erro', response.message)
+        });
+    }
+  }
 }
 </script>
 
 <style>
-.row-titles-coluns {
-  background: #EEEFF1 0% 0% no-repeat padding-box;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.row-titles-columns {
+  background: #e5e6e9 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   height: 60px;
+}
+
+.question-mark {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+.additional-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-size: 12px;
 }
 </style>

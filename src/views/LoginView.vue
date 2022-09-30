@@ -8,7 +8,7 @@
             <h1>Acessar sua conta</h1>
             <input type="email" name="" placeholder="E-mail">
             <input type="password" name="" placeholder="******">
-            <input type="submit" class="float-end" name="" value="ENTRAR">
+            <input type="submit" class="float-end" name="" value="ENTRAR" @click="login()">
             <p class="signup"><a href="#">Cadastre sua conta!</a></p>
           </form>
         </div>
@@ -18,6 +18,13 @@
 </template>
 
 <script>
+export default {
+  methods: {
+    login() {
+      this.$router.push('/forum');
+    }
+  }
+}
 
 </script>
 
