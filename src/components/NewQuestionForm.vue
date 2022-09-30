@@ -1,13 +1,7 @@
 <template>
   <div>
-    <button
-      id="buttonNewQuestion"
-      type="button"
-      class="btn btn-success btn-lg"
-      data-bs-toggle="modal"
-      data-bs-target="#newQuestionModal"
-      data-bs-whatever="@mdo"
-    >
+    <button id="buttonNewQuestion" type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
+      data-bs-target="#newQuestionModal" data-bs-whatever="@mdo">
       + Nova pergunta
     </button>
 
@@ -70,7 +64,11 @@ export default {
   data() {
     return {
       question: {},
+      tags: []
     }
+  },
+  mounted() {
+    this.listTags();
   },
   methods: {
     saveQuestion() {

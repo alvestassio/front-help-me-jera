@@ -17,7 +17,7 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" id="search-questions-input" class="form-control" placeholder="Buscar">
+          <input v-model="search" type="text" id="search-questions-input" class="form-control" placeholder="Buscar">
         </div>
       </div>
       <div class="col-md-1">
@@ -57,7 +57,7 @@ export default {
   },
   data() {
     return {
-      questions: []
+      questions: [],
     };
   },
   created() {
@@ -72,7 +72,7 @@ export default {
         .catch(response => {
           console.log('erro', response.message)
         });
-    }
+    },
   }
 }
 </script>

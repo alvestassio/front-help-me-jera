@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-12">
         <div class="user-information">
           <img class="user-avatar" :src="question.user.avatar" :title="question.user.name" alt="Avatar" />
           <h2 class="user-name">{{ question.user.name }}</h2>
         </div>
-        <div>
+        <div class="mt-3">
           <h2>{{ question.title }}</h2>
           <p class="question-description">{{ question.description }}</p>
         </div>
